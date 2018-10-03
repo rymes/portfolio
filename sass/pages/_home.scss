@@ -1,0 +1,205 @@
+
+// hero box sty;es
+
+.intro-box {
+  padding: 0 4%;
+  margin: 0 auto;
+  position: fixed;
+  z-index: 1;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.is-animated .intro-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  animation-name: fadeIn;
+  animation-timing-function: cubic-bezier(0,0,.25,1);
+  animation-duration: 3s;
+}
+
+.intro-line {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: start;
+  justify-content: center;
+}
+
+.split-bottom {
+  padding-bottom: 4rem;
+
+  @include response(tab-port) {
+    padding-bottom: 13rem;
+  }
+
+  @include response(phone) {
+    padding-bottom: 13rem;
+  }
+}
+
+.is-animated .intro-line-text-1 {
+  -ms-transform: translateX(-40%);
+  transform: translateX(-40%);
+
+  @include response(tab-port) {
+    -ms-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+
+  @include response(phone) {
+    -ms-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+}
+
+.is-animated .intro-line-text-2 {
+  -ms-transform: translateX(5%);
+  transform: translateX(5%);
+
+  @include response(tab-port) {
+    -ms-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+
+  @include response(phone) {
+    -ms-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+}
+
+.is-animated .intro-line-text-3 {
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+
+  @include response(tab-port) {
+    -ms-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+
+  @include response(phone) {
+    -ms-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+}
+
+.is-animated .intro-line-text-4 {
+  -ms-transform: translateX(-29%);
+  transform: translateX(-29%);
+
+  @include response(tab-port) {
+    -ms-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+
+  @include response(phone) {
+    -ms-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+}
+
+.is-animated .intro-line-text-5 {
+  -ms-transform: translateX(37%);
+  transform: translateX(37%);
+
+  @include response(tab-port) {
+    -ms-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+
+  @include response(phone) {
+    -ms-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+}
+
+.is-animated .intro-line-text-6 {
+  -ms-transform: translateX(30%);
+  transform: translateX(30%);
+
+  @include response(tab-port) {
+    -ms-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+
+  @include response(phone) {
+    -ms-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+}
+
+.intro-line-text {
+  display: inline-block;
+  transition: transform 1.2s cubic-bezier(1,0,.25,1);
+  font-size: 7rem;
+  font-weight: 500;
+  line-height: 1.2;
+  transition-delay: 1s;
+
+  @include response(phone) {
+    font-size: 3.8rem;
+    line-height: 1.6;
+  }
+}
+
+.emoji-area {
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-20%, -35%);
+  z-index: 3;
+  animation-name: fadeIn;
+  animation-timing-function: cubic-bezier(0,0,.25,1);
+  animation-duration: 3s;
+
+  @include response(tab-port) {
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @include response(phone) {
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  &__emoji {
+    font-size: 10rem;
+    margin-bottom: 0;
+  }
+  
+  &__subtext {
+    color: #999;
+    font-size: .875rem;
+  }
+}
+
+.randomize {
+  cursor: url(../../img/reload.svg) 20 20, auto;
+
+  & h1 {
+    padding: 11rem 0rem 0rem 0rem;
+
+
+  @include response(tab-port) {
+    padding: 0rem;
+  }
+
+  @include response(phone) {
+    padding: 0rem;
+  }
+
+  }
+}

@@ -1,0 +1,110 @@
+.popup {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba($color: #000000, $alpha: .8);
+  z-index: 2000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .4s ease;
+
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &:target &__content {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+
+  &__close {
+    &:link,
+    &:visited {
+      color: #111111;
+      position: absolute;
+      top: 2.5rem;
+      right: 2.5rem;
+      font-size: 3rem;
+      text-decoration: none;
+      display: inline-block;
+      line-height: 1;
+
+      @include response(phone) {
+        font-size: 4rem;
+      }
+    }
+  }
+
+  &__content {
+    @include absCenter;
+    display: table;
+    overflow: hidden;
+    width: 66.666%;
+    background-color: #ffffff;
+    box-shadow: 0 2rem 4rem rgba($color: #000000, $alpha: .2);
+    opacity: 0;
+    transform: translate(-50%, -30%);
+    transition: all .4s;
+
+    @include response(phone) {
+      width: 80%;
+    }
+  }
+
+  &__left {
+    width: 33.333%;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 4rem 2rem 4rem 5rem;
+
+    @include response(tab-port) {
+      display: none;
+    }
+  
+    @include response(phone) {
+      display: none;
+    }
+  }
+
+  &__right {
+    width: 66.666%;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 6rem 3rem;
+
+    @include response(tab-port) {
+      width: 100%;
+      padding: 6rem 6rem;
+    }
+  
+    @include response(phone) {
+      width: 100%;
+      padding: 3rem 3rem;
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+  }
+
+  & p {
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+  }
+
+  & h2 {
+    line-height: 2;
+  }
+
+  &__link {
+    border-bottom: 2px solid #111111;
+
+    &:hover {
+      background-color: #00ffff;
+    }
+  }
+}

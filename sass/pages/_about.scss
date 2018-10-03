@@ -1,0 +1,69 @@
+.about-landing {
+  background-color: $color-dusty-pink;
+}
+
+.p-about {
+  margin-bottom: 4rem;
+}
+
+.about {
+
+  margin-top: 20rem;
+
+  &__text {
+    font-size: 5.5rem;
+    font-weight: 400;
+    letter-spacing: -1px;
+    line-height: 7.5rem;
+    margin-bottom: 5rem;
+    padding: 0rem 8rem;
+
+    @include response(phone) {
+      font-size: 3rem;
+      line-height: 5rem;
+      margin-bottom: 3rem;
+      padding: 0rem 0rem;
+    }
+  }
+
+  &__hover {
+    // border-bottom: 3px solid #111111;
+    font-weight: 500;
+  }
+
+  &__hoverlink {
+    border-bottom: 3px solid #111111;
+    font-weight: 500;
+
+    @include response(phone) {
+      padding-bottom: 2px;
+      border-bottom: 1.5px solid #111111;
+    }
+  }
+
+}
+
+.hover__tool {
+  position: relative;
+  display: inline-block;
+  
+  }
+  
+  .hover__tool .hover__img {
+  visibility: hidden;
+  opacity: 0;
+  width: 120px;
+  transition: all .1s ease-in;
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 50%;
+  margin-left: -170px;
+  }
+  
+  .hover__tool:hover .hover__img {
+    visibility: visible;
+    opacity: 1;
+   }

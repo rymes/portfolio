@@ -1,0 +1,39 @@
+footer {
+  display: inline-block;
+}
+
+
+.footer {
+  // border-top-left-radius: 50% 50%;
+  // border-top-right-radius: 50% 50%;
+  background-color: #fff;
+  color: #111;
+  padding: 2rem;
+
+  // @include response(tab-port) {
+  //   border-top-left-radius: 50% 15%;
+  //   border-top-right-radius: 50% 15%;
+  // }
+
+  &__col {
+    margin-top: 8.5rem;
+    margin-bottom: 6.5rem;
+    display: flex;
+    justify-content: center;
+    align-content: flex-end;
+
+    @include response(tab-port) {
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__link {
+    font-size: 2rem;
+
+    @include response(tab-port) {
+      font-size: 2.8rem;
+    }
+  }
+
+}

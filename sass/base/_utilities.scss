@@ -1,0 +1,54 @@
+.align-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.width-1-1 {
+  width: 100%;
+
+  .inset {
+    width: 80%;
+
+    @include response(tab-land) {
+      width: 90%;
+    }
+
+    @include response(tab-port) {
+      width: 100%;
+    }
+    
+  }
+
+}
+
+.width-2-3 {
+  width: 66%;
+
+
+  @include response(tab-land) {
+    width: 80%
+  }
+
+  @include response(tab-port) {
+    width: 100%
+  }
+
+}
+
+.width-4-5 {
+  width: 80%;
+
+  @include response(tab-port) {
+    width: 100%
+  }
+  
+}
+
+.align-fix-left {
+  left: -.5rem;
+}
+
+
+.img-wide {
+  width: 100%;
+}

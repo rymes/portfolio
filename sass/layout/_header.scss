@@ -1,0 +1,44 @@
+
+.header {
+  height: 95vh;
+
+  // clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+  &__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+  }
+
+  &__logo {
+    height: 3.5rem;
+  }
+  
+  &__text-box {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 66vw;
+
+    @include response(tab-port) {
+      width: 100%
+    }
+  }
+
+  &--work {
+    height: 60vh;
+    position: inherit;
+
+    @include response(tab-port) {
+      height: 80vh;
+    }
+
+  }
+
+  &--about {
+    height: 40vh;
+  }
+
+}

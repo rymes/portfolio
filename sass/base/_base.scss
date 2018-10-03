@@ -1,0 +1,56 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+
+  @include response(tab-land) {
+    font-size: 56.25%;
+  }
+
+  @include response(tab-port) {
+    font-size: 50%;
+  }
+
+  @include response(phone) {
+    font-size: 42.5%;
+  }
+
+  @include response(desktop) {
+    font-size: 62.5%;
+  }
+
+  @include response(big-desktop) {
+    font-size: 75%;
+  }
+
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.main {
+  padding: 3rem 8rem 8rem 8rem;
+
+  @include response(tab-port) {
+    padding: 3rem 5rem 6rem 5rem;
+  }
+
+  @include response(phone) {
+    padding: 3rem 4rem 4rem 4rem;
+  }
+
+}
+
+.page {
+  transition: opacity 1s;
+  animation-name: pageFade;
+  animation-duration: 1s;
+}
+

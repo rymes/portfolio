@@ -1,0 +1,38 @@
+.velanova-landing {
+  background-color: #EADFD4;
+}
+
+.nike-landing {
+  background-color: #f6f6f6;
+}
+
+.ednw-landing {
+  background-color: #D8E1E1;
+}
+
+
+
+
+.mainsqueeze-landing {
+  background-color: #f6f6f6;
+}
+
+.sub {
+  display: flex;
+  margin-top: 2rem;
+  margin-bottom: 8rem;
+
+  @include response(phone) {
+    margin-top: 0rem;
+    margin-bottom: 6rem;
+  }
+
+  &__sub {
+    margin-right: 8rem;
+  }
+
+  &__year {
+    margin-right: 8rem;
+  }
+}
+
