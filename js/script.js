@@ -35,38 +35,40 @@ $(document).ready(function() {
 
 $(document).ready(function () {
   //initialize swiper when document ready
-  var mySwiper = new Swiper ('.swiper-container', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: true,
-    grabCursor: false,
-    autoHeight: true, //enable auto height
-    spaceBetween: 0,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    // pagination: {
-    //   el: '.swiper-pagination',
-    //   type: 'bullets',
-    // },
-
-  })
-
-  var mySwiper = new Swiper('.swiper-container-autoplay', {
-    direction: 'horizontal',
-    loop: true,
-    grabCursor: false,
-    autoHeight: true, //enable auto height
-    spaceBetween: 0,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    autoplay: {
-      delay: 4000,
-    },
-  });
+  if ($('.swiper-container').length > 0) {
+    var mySwiper = new Swiper ('.swiper-container', {
+      // Optional parameters
+      direction: 'horizontal',
+      loop: true,
+      grabCursor: false,
+      autoHeight: true, //enable auto height
+      spaceBetween: 0,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      // pagination: {
+      //   el: '.swiper-pagination',
+      //   type: 'bullets',
+      // },
+  
+    })
+  
+    var mySwiper = new Swiper('.swiper-container-autoplay', {
+      direction: 'horizontal',
+      loop: true,
+      grabCursor: false,
+      autoHeight: true, //enable auto height
+      spaceBetween: 0,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      autoplay: {
+        delay: 4000,
+      },
+    });
+  }
 });
 
 // Tabs init
@@ -88,7 +90,15 @@ $(document).ready(function(){
 // Footer Reveal init
 
 $(document).ready(function(){
-  $('footer').footerReveal({ shadow: false });
+  // First save the jquery object as a variable that way you can do a check to
+  // see if it has the desired html content to proceed with the script and if it
+  // does, you already have it stored as a variable so jquery doesn't need
+  // to do another search through the DOM to get the jquery object again and
+  // call the footerReveal method on it.
+  var $footer = $('footer');
+  if ($footer.length > 0) {
+    $footer.footerReveal({ shadow: false });
+  }
 });
 
 
@@ -155,7 +165,9 @@ $(document).ready(function(){
           getRandom();
       })
   }
-
-  init();
+  if (randomButton) {
+    init();
+  }
+  
 });
 
